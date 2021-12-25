@@ -1,3 +1,5 @@
-#JAVA 8
+# JAVA 8
 
-##Streams
+
+## Topics covered
+ 1. [Streams](src/streams/README.md)
