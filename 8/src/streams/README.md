@@ -1,16 +1,17 @@
-#STREAMS<T>
+# STREAMS<T>
  
 Introduced in **JAVA 8**, streams provide a more efficient way of 
 manipulating a collection of data of any type. Previously we needed to use 
 loops to access these data which was not only difficult to understand but 
 was inefficient as well.
 
-##Topics
+## Topics
 - [Creating streams](#creating-streams)
 - [Types of streams](#types-of-streams)
 - [Operations](#operations)
 
-##Creating streams
+## Creating streams
+
 There are two main ways of creating a stream. 
  1. [Using Collections.stream() method](#using-collectionstream)
  2. [Using Stream.of() method](#using-streamof)
