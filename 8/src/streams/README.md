@@ -23,6 +23,6 @@ List<String> cities = Arrays.asList("New York", "Nairobi", "Cape Town",
 Stream<String> citieStream = cities.stream(); 
 ```
 
-##Types of streams
+##Types of streams 
 ##Operations
 
