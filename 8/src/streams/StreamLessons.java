@@ -81,6 +81,12 @@ public class StreamLessons {
                 .sum();
         System.out.println("Sum prices for products exceeding 20 in quantity: "+prices);
 
+        IntStream studentEntries = IntStream.builder()
+                .add(10)
+                .add(20)
+                .add(30)
+                .build();
+
 
     }
 }
