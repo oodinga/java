@@ -30,7 +30,7 @@ Stream<String> citieStream = Stream.of("New York", "Nairobi", "Cape Town",
         "London");
 ```
 
-##Types of streams
+## Types of streams
 Java gives us ability to create many types of streams out of the box. Stream 
 being a generic class means we can create a stream of any kind of object. In 
 this tutorial we will explore the types of streams we can create out of the box.
