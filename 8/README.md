@@ -2,4 +2,6 @@
 
 
 ## Topics covered
- 1. [Streams](src/streams/README.md)
+ 1. [Lambda](src/lambdas/README.md)
+ 2. [Streams](src/streams/README.md)
+ 
