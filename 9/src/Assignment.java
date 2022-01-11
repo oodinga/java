@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+import java.util.StringJoiner;
 import java.util.stream.Collectors;
 
 /**
@@ -30,13 +31,10 @@ public class Assignment {
             }
 
 
-
-        StringBuilder builder = new StringBuilder();
-        for (Character c : palindrome) {
-            builder.append(c);
-        }
-
-        return builder.toString();
+        return Arrays
+                .stream(palindrome)
+                .map(String::valueOf)
+                .collect(Collectors.joining());
     }
 
 
