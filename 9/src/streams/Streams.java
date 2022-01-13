@@ -1,9 +1,9 @@
 package streams;
 
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import static streams.MyPredicates.compare;
 
@@ -67,6 +67,30 @@ public class Streams {
         dropWhileOps(numbers,  "/", 9);
     }
 
+    public static void streamIterate() {
+        //Stream.iterate(initial value, next value)
+       String first10= Stream.iterate(0, n -> n + 1)
+               .limit(10)
+               .map(String::valueOf)
+               .collect(Collectors.joining(", ", "[", "]"));
+        System.out.println(first10);
+
+        String odds =Stream.iterate(0, n -> n + 1)
+                .filter(x -> x % 2 != 0) //odd
+                .limit(10)
+                .map(String::valueOf)
+                .collect(Collectors.joining(", ", "[", "]"));
+        System.out.println(odds);
+
+        //fibonacci
+        String fibonacci = Stream.iterate(new int[]{0, 1}, n -> new int[]{n[1], n[0] + n[1]})
+                .limit(10)
+                .map(n -> n[0])
+                .map(String::valueOf)
+                .collect(Collectors.joining(", ", "[", "]"));
+        System.out.println(fibonacci);
+    }
+
     public static void main(String[] args) {
         System.out.println("------------------takeWhile ops-------------");
         takeWhile();
@@ -74,6 +98,11 @@ public class Streams {
 
         System.out.println("------------------dropWhile ops---------------");
         dropWhile();
+        System.out.println("--------------------------------------------");
+
+
+        System.out.println("------------------Stream iterate---------------");
+        streamIterate();
         System.out.println("--------------------------------------------");
 
     }
