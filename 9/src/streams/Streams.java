@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static streams.MyPredicates.compare;
+import static streams.MyPredicates.divisibleBy;
 
 /**
  * @author : Odinga David
@@ -85,10 +86,16 @@ public class Streams {
         //fibonacci
         String fibonacci = Stream.iterate(new int[]{0, 1}, n -> new int[]{n[1], n[0] + n[1]})
                 .limit(10)
-                .map(n -> n[0])
-                .map(String::valueOf)
+                .map(n -> String.valueOf(n[0]))
                 .collect(Collectors.joining(", ", "[", "]"));
         System.out.println(fibonacci);
+
+        System.out.println("\nIterate with condition");
+        Stream.iterate(1, n-> n < 200, n-> n*2)
+                .filter(divisibleBy(2))
+                .forEach(x-> Stream.iterate(1, n-> n < x, n->n+1)
+                        .filter(divisibleBy(3))
+                        .forEach(y-> System.out.println( x+" -> "+y)));
     }
 
     public static void main(String[] args) {
@@ -104,6 +111,7 @@ public class Streams {
         System.out.println("------------------Stream iterate---------------");
         streamIterate();
         System.out.println("--------------------------------------------");
+
 
     }
 }

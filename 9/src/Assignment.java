@@ -30,6 +30,9 @@ public class Assignment {
                 }
             }
 
+        System.out.println(Arrays.stream(palindrome)
+                .map(String::valueOf)
+                .reduce("",(partial, elem)-> partial + elem));
 
         return Arrays
                 .stream(palindrome)

@@ -24,7 +24,7 @@ public class MyPredicates {
         return n -> n <= number;
     }
 
-     private static Predicate<Integer> divisibleBy(int number){
+     public static Predicate<Integer> divisibleBy(int number){
         return n -> n % number == 0;
     }
 
