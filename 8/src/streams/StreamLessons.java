@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 import java.util.stream.Stream;
 
 /**
@@ -12,6 +13,12 @@ import java.util.stream.Stream;
  * @since : 12/24/21, Fri
  */
 public class StreamLessons {
+
+    public static long factorial(long n){
+        return LongStream
+                .rangeClosed(2, n)
+                .reduce(1, (long a, long b)-> a*b );
+    }
 
     public static void main(String[] args) {
 
@@ -86,6 +93,8 @@ public class StreamLessons {
                 .add(20)
                 .add(30)
                 .build();
+
+        System.out.println("4 Factorial: "+factorial(1));
 
     }
 }
