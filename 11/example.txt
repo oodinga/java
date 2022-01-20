@@ -1,0 +1,16 @@
+name, age, gender
+David, 30, M
+Moses, 25, M
+Belinda, 35, F
+Elgar, 50, F
+Risper, 30, F
+
+Jane, 30, F
+Jeff, 10, F
+Meshack, 15, F
+Jane, 30, F
+Jeff, 10, F
+Meshack, 15, F
+Jane, 30, F
+Jeff, 10, F
+Meshack, 15, F
