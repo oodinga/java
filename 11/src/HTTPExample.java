@@ -21,11 +21,10 @@ public class HTTPExample {
                 .version(Version.HTTP_1_1)
                 .connectTimeout(Duration.ofSeconds(5))
                 .followRedirects(Redirect.NORMAL)
-//                .authenticator(Authenticator.getDefault())
                 .build();
 
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://foo.com/"))
+                .uri(URI.create("https://jsonplaceholder.typicode.com/posts"))
                 .timeout(Duration.ofMinutes(2))
                 .GET()
                 .build();
