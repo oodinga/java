@@ -1,5 +1,3 @@
-package http;
-
 import java.io.IOException;
 import java.net.Authenticator;
 import java.net.URI;
