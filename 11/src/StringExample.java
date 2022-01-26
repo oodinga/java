@@ -36,7 +36,7 @@ public class StringExample {
 
         printSeparator("-*", " lines() ", 10);
         String lines= """
-                line 1
+                "line 1": "This is the first line"
                 line 2
                 line 3
                 line 4""";
