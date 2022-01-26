@@ -30,18 +30,12 @@ public class MyPredicates {
 
     static Predicate<Integer> compare(String comparator, int number){
        return switch (comparator) {
-            case ">":
-                yield moreThan(number);
-            case ">=":
-                yield moreThanEqual(number);
-            case "<":
-                yield lessThan(number);
-            case "<=":
-                yield lessThanEqual(number);
-            case "/" :
-                yield divisibleBy(number);
-            default:
-                throw new IllegalStateException("Unexpected value: " + comparator);
+            case ">" : yield moreThan(number);
+            case ">=": yield moreThanEqual(number);
+            case "<" : yield lessThan(number);
+            case "<=": yield lessThanEqual(number);
+            case "/" : yield divisibleBy(number);
+            default:  throw new IllegalStateException("Unexpected value: " + comparator);
         };
     }
 }
