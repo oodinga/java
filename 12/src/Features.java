@@ -12,7 +12,7 @@ import java.util.stream.Stream;
  * @author : Odinga David
  * @since : 1/26/22, Wed
  */
-public class StringFeatures {
+public class Features {
 
     public static void main(String[] args) throws IOException {
         String toIndent= "Hello developer!\nThis is Java 12 article.";
