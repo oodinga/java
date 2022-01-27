@@ -8,6 +8,8 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import static java.util.stream.Collectors.toList;
+
 /**
  * @author : Odinga David
  * @since : 1/26/22, Wed
@@ -65,7 +67,7 @@ public class Features {
         Function<Long, String> shortenLikes = likesShort::format;
         List<String> likes= Stream.iterate(10L, n-> n<= 100000000000000L, n-> n*10L)
                 .map(shortenLikes)
-                .collect(Collectors.toList());
+                .collect(toList());
 
         System.out.println(likes);
 
